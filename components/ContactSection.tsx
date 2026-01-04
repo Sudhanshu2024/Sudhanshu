@@ -1,13 +1,13 @@
 'use client'
 
 import { contactLinks, opportunities } from '@/lib/contact'
-import ParticleOrbs from './ParticleOrbs'
+import CanvasParticles from './CanvasParticles'
 
 export default function ContactSection() {
   return (
     <section id="contact" className="py-20 relative overflow-hidden bg-bg-primary dark:bg-dark-bg">
-      {/* 3D Particle Orbs Background */}
-      <ParticleOrbs />
+      {/* Interactive Particles Background */}
+      <CanvasParticles className="z-0" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
