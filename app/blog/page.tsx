@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 import BlogGrid from '@/components/BlogGrid'
 import { blogPosts } from '@/lib/blogs'
 
@@ -21,7 +20,6 @@ export default function BlogPage() {
         </div>
         <BlogGrid posts={blogPosts} />
       </main>
-      <Footer />
     </>
   )
 }

@@ -1,10 +1,10 @@
 'use client'
 
 import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 import HeroSection from '@/components/HeroSection'
 import ProjectsGrid from '@/components/ProjectsGrid'
 import SkillsSection from '@/components/SkillsSection'
+import ContactSection from '@/components/ContactSection'
 import { projects } from '@/lib/projects'
 
 export default function Home() {
@@ -20,8 +20,10 @@ export default function Home() {
 
         {/* Skills Section */}
         <SkillsSection />
+
+        {/* Contact Section */}
+        <ContactSection />
       </main>
-      <Footer />
     </>
   )
 }

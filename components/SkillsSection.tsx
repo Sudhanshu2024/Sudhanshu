@@ -41,14 +41,14 @@ export default function SkillsSection() {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {skillCategories.map((category) => {
             const Icon = iconMap[category.icon] || Code
 
             return (
               <div
                 key={category.id}
-                className="rounded-lg border border-border-primary dark:border-dark-border bg-bg-primary dark:bg-dark-bg-secondary text-text-primary dark:text-dark-text shadow-sm p-6 hover:shadow-2xl hover:shadow-accent/20 dark:hover:shadow-accent-blue/20 transition-all duration-300 group hover:-translate-y-2"
+                className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] min-w-[280px] max-w-[350px] rounded-lg border border-border-primary dark:border-dark-border bg-bg-primary dark:bg-dark-bg-secondary text-text-primary dark:text-dark-text shadow-sm p-6 hover:shadow-2xl hover:shadow-accent/20 dark:hover:shadow-accent-blue/20 transition-all duration-300 group hover:-translate-y-2"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="text-accent dark:text-accent-blue group-hover:scale-110 transition-transform duration-300 p-2 bg-accent/10 dark:bg-accent-blue/10 rounded-lg">

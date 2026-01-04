@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 import { blogPosts } from '@/lib/blogs'
 import type { Metadata } from 'next'
 
@@ -100,7 +99,6 @@ export default function BlogDetailPage({ params }: BlogPageProps) {
           </article>
         </div>
       </main>
-      <Footer />
     </>
   )
 }

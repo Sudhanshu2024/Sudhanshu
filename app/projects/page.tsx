@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 import ProjectsGrid from '@/components/ProjectsGrid'
 import { projects } from '@/lib/projects'
 
@@ -21,7 +20,6 @@ export default function ProjectsPage() {
         </div>
         <ProjectsGrid projects={projects} />
       </main>
-      <Footer />
     </>
   )
 }

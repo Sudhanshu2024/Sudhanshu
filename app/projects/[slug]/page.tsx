@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 import { projects } from '@/lib/projects'
 import type { Metadata } from 'next'
 
@@ -145,7 +144,6 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   )
 }

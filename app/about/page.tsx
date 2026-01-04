@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 
 const techStack = [
   'React', 'Next.js', 'TypeScript', 'Node.js',
@@ -83,7 +82,6 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </main>
-      <Footer />
     </>
   )
 }

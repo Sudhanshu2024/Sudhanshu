@@ -1,40 +1,20 @@
 'use client'
 
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-
 export default function Footer() {
-  const socialLinks = [
-    { name: 'Email', href: 'mailto:your.email@example.com', icon: '✉️' },
-    { name: 'GitHub', href: 'https://github.com/yourusername', icon: '🐙' },
-    { name: 'LinkedIn', href: 'https://linkedin.com/in/yourusername', icon: '💼' },
-    { name: 'X', href: 'https://x.com/yourusername', icon: '𝕏' },
-  ]
+  const year = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-border-primary dark:border-dark-border py-12 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-text-secondary dark:text-dark-text-secondary text-sm">
-            © {new Date().getFullYear()} Sudhanshu Kumar Sinha. All rights reserved.
-          </p>
-          <div className="flex space-x-6">
-            {socialLinks.map((link, index) => (
-              <motion.a
-                key={link.name}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.1 }}
-                className="text-text-secondary dark:text-dark-text-secondary hover:text-accent dark:hover:text-accent-blue transition-colors text-lg"
-                aria-label={link.name}
-              >
-                {link.name}
-              </motion.a>
-            ))}
+    <footer className="py-12 border-t border-border-primary dark:border-dark-border">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          {/* Logo */}
+          <div className="text-2xl md:text-3xl font-black mb-4 md:mb-0 text-accent dark:text-accent-blue hover:scale-105 transition-transform duration-300">
+            &lt;Dev/&gt;
+          </div>
+
+          {/* Copyright */}
+          <div className="text-text-secondary dark:text-dark-text-secondary text-sm md:text-base text-center md:text-right">
+            © {year} Sudhanshu. All rights reserved.
           </div>
         </div>
       </div>

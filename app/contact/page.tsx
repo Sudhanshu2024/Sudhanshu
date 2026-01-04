@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 
 const socialLinks = [
   { name: 'Email', href: 'mailto:your.email@example.com', icon: '✉️', label: 'your.email@example.com' },
@@ -69,7 +68,6 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </main>
-      <Footer />
     </>
   )
 }
