@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+    @apply bg-bg-primary dark:bg-dark-bg;
+    @apply text-text-primary dark:text-dark-text;
+  }
+
+  body {
+    @apply antialiased;
+    @apply bg-bg-primary dark:bg-dark-bg;
+    @apply text-text-primary dark:text-dark-text;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Custom cursor - site-wide */
+  html, body {
+    cursor: none;
+  }
+
+  * {
+    cursor: none !important;
+  }
+
+  /* Floating animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(30px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .floating-text {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .floating-text-delayed {
+    animation: float 4s ease-in-out infinite 0.5s;
+  }
+
+  /* Glowing text effect */
+  .glowing-text {
+    background: linear-gradient(45deg, #ffffff, #3b82f6, #a5b4fc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
+    transition: all 0.3s ease;
+  }
+
+  .dark .glowing-text {
+    background: linear-gradient(45deg, #ffffff, #60a5fa, #a78bfa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.5));
+  }
+
+  .glowing-text:hover {
+    filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.8));
+  }
+
+  .dark .glowing-text:hover {
+    filter: drop-shadow(0 0 40px rgba(96, 165, 250, 0.8));
+  }
+}
