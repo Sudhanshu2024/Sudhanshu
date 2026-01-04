@@ -15,13 +15,13 @@ export const contactLinks: ContactLink[] = [
   },
   {
     icon: Linkedin,
-    href: 'https://www.linkedin.com/in/abdullah-james/',
-    label: 'linkedin.com/in/abdullah-james',
+    href: 'https://www.linkedin.com/in/sudhanshu-kumar-sinha-b58776210/',
+    label: 'linkedin.com/in/Sudhanshu-kr-sinha',
   },
   {
     icon: Github,
-    href: 'https://github.com/Absatron',
-    label: 'github.com/Absatron',
+    href: 'https://github.com/Sudhanshu2024',
+    label: 'github.com/Sudhanshu',
   },
 ]
 

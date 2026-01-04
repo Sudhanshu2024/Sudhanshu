@@ -3,27 +3,25 @@
 import { useCallback, useEffect, useState } from 'react'
 import Particles from '@tsparticles/react'
 import { loadSlim } from '@tsparticles/slim'
-import type { Engine } from '@tsparticles/engine'
+import type { Engine, Container } from '@tsparticles/engine'
 import { motion } from 'framer-motion'
 import CustomCursor from './CustomCursor'
 import ScrollCTA from './ScrollCTA'
 import { useTheme } from './ThemeProvider'
 
+
+
+
+
 export default function Hero() {
   const { theme } = useTheme()
-  const [particlesInit, setParticlesInit] = useState<((engine: Engine) => Promise<void>) | null>(null)
+  //const [particlesInit, setParticlesInit] = useState<((engine: Engine) => Promise<void>) | null>(null)
 
-  useEffect(() => {
-    loadSlim(async (engine) => {
-      await engine.loadPreset('stars')
-    }).then(() => {
-      setParticlesInit(() => loadSlim)
-    })
-  }, [])
+ 
 
-  const particlesLoaded = useCallback(async (container: any) => {
-    // Particles loaded callback
-  }, [])
+  // const particlesLoaded = useCallback(async (container: any) => {
+  //   // Particles loaded callback
+  // }, [])
 
   const isDark = theme === 'dark'
 
@@ -97,7 +95,7 @@ export default function Hero() {
           enable: true,
           mode: 'push' as const,
         },
-        resize: true,
+        resize: { enable: true },
       },
       modes: {
         repulse: {
@@ -143,15 +141,19 @@ export default function Hero() {
   return (
     <section className="relative h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900/30 to-slate-900 dark:from-dark-bg dark:via-purple-900/20 dark:to-dark-bg">
       {/* Particles Background */}
-      {particlesInit && (
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          options={particleOptions}
-          className="absolute inset-0 z-0"
-        />
-      )}
+      {/* ✅ v3 Correct Syntax */}
+      <Particles
+  id="tsparticles"
+  options={particleOptions}
+  className="absolute inset-0 z-0 w-full h-full"
+  style={{ 
+    position: 'absolute', 
+    width: '100%', 
+    height: '100%' 
+  }}
+/>
+
+      
 
       {/* Content Overlay */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 lg:px-8">

@@ -29,7 +29,7 @@ export default function Navbar() {
                 About
               </Link>
               <a
-                href="https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing"
+                href="https://drive.google.com/file/d/1iHTag_gGAiAetEKcavEkW57M_M3WLOwC/view?usp=share_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-text-primary dark:text-dark-text hover:text-accent dark:hover:text-accent-blue transition-colors"

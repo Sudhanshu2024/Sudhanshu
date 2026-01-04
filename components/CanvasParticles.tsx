@@ -150,7 +150,7 @@ export default function CanvasParticles({ className = '' }: { className?: string
     <canvas
       ref={canvasRef}
       className={`absolute inset-0 w-full h-full pointer-events-auto ${className}`}
-      style={{ zIndex: 1 }}
+      style={{ zIndex: 1, willChange: 'transform' }}
     />
   )
 }

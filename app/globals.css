@@ -19,6 +19,30 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
+  /* Performance optimizations */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Smooth scroll with reduced motion support */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
   /* Custom cursor - site-wide */
   html, body {
     cursor: none;
@@ -95,5 +119,31 @@
 
   .particle-3d {
     animation: particleFloat3D 8s ease-in-out infinite;
+  }
+
+  /* Connect Section 3D Particle Orbit Animation */
+  @keyframes particle-orbit-3d {
+    0%,
+    100% {
+      opacity: 1;
+      transform: rotateZ(var(--rotate-z)) rotateY(var(--rotate-y)) translate(180px)
+        rotate(calc(-1 * var(--rotate-z)));
+    }
+    50% {
+      opacity: 0.8;
+      transform: rotateZ(var(--rotate-z)) rotateY(var(--rotate-y)) translate(220px)
+        rotate(calc(-1 * var(--rotate-z)));
+    }
+  }
+
+  .particle-orb-container .particle-3d {
+    position: absolute;
+    border-radius: 50%;
+    animation: particle-orbit-3d 7s infinite ease-in-out;
+  }
+
+  .particle-orb-container .particle-3d:nth-child(5n) {
+    width: 2.5px;
+    height: 2.5px;
   }
 }
