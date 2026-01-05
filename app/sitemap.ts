@@ -3,7 +3,7 @@ import { projects } from '@/lib/projects'
 import { blogPosts } from '@/lib/blogs'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://yourdomain.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://sudhanshukrsinha.vercel.app'
 
   // Static routes
   const routes = ['', '/projects', '/blog', '/about', '/contact'].map((route) => ({
