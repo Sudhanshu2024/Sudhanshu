@@ -13,6 +13,19 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    slug: "Football-Analytics",
+    title: "Football Analytics Dashboard",
+    shortDescription: "Real-time analytics for football teams and players",
+    fullDescription: "<span style='color:#2563eb; font-weight:600;'>Building</span> a football analytics dashboard focused on understanding how real-time data can be collected, processed, and visualized for teams and players.<br><br>Currently, the project is in an active development and learning phase, where I am exploring different modules required to build a scalable and reliable analytics system. The goal is to aggregate data from live match feeds and historical datasets to generate meaningful insights around player performance, team tactics, and match outcomes.<br><br>I am experimenting with data modeling, WebSocket-based real-time updates, and interactive visualizations using D3.js to better understand how large volumes of sports data can be represented clearly and intuitively.<br><br><strong>Planned Features & Learning Goals:</strong><br>- Real-time data ingestion during live matches using Socket.io<br>- Interactive charts and dashboards for performance analysis<br>- PostgreSQL-based data storage for historical insights<br>- Role-based access and authentication concepts<br>- Custom analytics views and report generation<br><br>This project serves as a hands-on learning experience to deepen my understanding of real-time systems, data visualization, and full-stack architecture while gradually evolving into a complete analytics platform.",
+
+    thumbnail: "/projects/chat-thumb.jpg",
+    demoVideoUrl: "",
+    techStack: ["Next.js", "Socket.io", "PostgreSQL", "TypeScript"],
+    liveUrl: "",
+    repoUrl: "",
+    year: 2025
+  },
    {
     slug: "AI-Voice-Assistant",
     title: "AI Voice Assistant",
@@ -25,24 +38,13 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/Sudhanshu2024/Voice-Assistance-AI",
     year: 2026
   },
-  {
-    slug: "chat-app",
-    title: "Realtime Chat App",
-    shortDescription: "Socket.io chat with typing indicators",
-    fullDescription: "Built a fullstack chat application with real-time messaging, user presence, and message history. Implemented using Next.js API routes with PostgreSQL for persistent storage. Features include typing indicators, online status, message reactions, and end-to-end encryption for private conversations.",
-    thumbnail: "/projects/chat-thumb.jpg",
-    demoVideoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    techStack: ["Next.js", "Socket.io", "PostgreSQL", "TypeScript"],
-    liveUrl: "https://chat.example.com",
-    repoUrl: "https://github.com/you/chat-app",
-    year: 2025
-  },
+  
   {
     slug: "Client-portfolio",
     title: "Client Portfolio",
     shortDescription: "Responsive portfolio website for a client",
-    fullDescription: "Developed a responsive portfolio website for a client using Next.js and Tailwind CSS. The site features a modern design with smooth animations, interactive elements, and optimized performance. Includes sections for projects, skills, and contact information. Implemented the site with SEO best practices and integrated a contact form with email notifications.The project was delivered on time and received positive feedback from the client for its design and functionality.The portfolio effectively reflects the best features of Next.Js , with caching and server-side rendering for fast load times. The contents were easily managed through a headless CMS, allowing the client to update their projects and skills without needing technical knowledge. Although this was just a portfolio website, it showcases the capabilities of Next.Js in building fast, responsive, and user-friendly web applications and allowed me to work with a real client, enhancing my communication and project management skills.",
-    thumbnail: "/projects/client-portfolio-thumb.jpg",
+    fullDescription: "Developed a responsive portfolio website for a client using Next.js and Tailwind CSS. The site features a modern design with smooth animations, interactive elements, and optimized performance.<br> Includes sections for projects, skills, and contact information. Implemented the site with SEO best practices and integrated a contact form with email notifications.The project was delivered on time and received positive feedback from the client for its design and functionality.<br>The portfolio effectively reflects the best features of Next.Js , with caching and server-side rendering for fast load times. The contents were easily managed through a headless CMS, allowing the client to update their projects and skills without needing technical knowledge.<br> Although this was just a portfolio website, it showcases the capabilities of Next.Js in building fast, responsive, and user-friendly web applications and allowed me to work with a real client, enhancing my communication and project management skills.",
+    thumbnail: "/projects/client-portfolio.png",
     demoVideoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     techStack: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript", "Vercel", "Headless CMS"],
     liveUrl: "",

@@ -26,7 +26,8 @@ export const skillCategories: SkillCategory[] = [
       'Stripe Integration',
       'Vercel',
       'AWS',
-      'LiveKit Cloud'
+      'LiveKit Cloud',
+      "CMS"
     ],
   },
   {

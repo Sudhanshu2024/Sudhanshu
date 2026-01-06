@@ -92,31 +92,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
             </div>
           </div>
 
-          {/* Demo Video Section */}
-          {(project.demoVideoUrl || project.demoVideoFile) && (
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold text-text-primary dark:text-dark-text mb-4">Demo Video</h2>
-              <div className="aspect-video bg-bg-secondary dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg">
-                {project.demoVideoUrl ? (
-                  <iframe
-                    src={project.demoVideoUrl}
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                ) : project.demoVideoFile ? (
-                  <video
-                    src={project.demoVideoFile}
-                    className="w-full h-full object-contain"
-                    controls
-                    preload="metadata"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                ) : null}
-              </div>
-            </div>
-          )}
+          
 
           {/* Project Thumbnail/Image */}
           {project.thumbnail && (
@@ -143,6 +119,32 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                 dangerouslySetInnerHTML={{ __html: project.fullDescription }}
               />
             </div>
+            {/* Demo Video Section */}
+          {(project.demoVideoUrl || project.demoVideoFile) && (
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-text-primary dark:text-dark-text mb-4">Demo Video</h2>
+              <div className="aspect-video bg-bg-secondary dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg">
+                {project.demoVideoUrl ? (
+                  <iframe
+                    src={project.demoVideoUrl}
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                ) : project.demoVideoFile ? (
+                  <video
+                    src={project.demoVideoFile}
+                    className="w-full h-full object-contain"
+                    controls
+                    preload="metadata"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                ) : null}
+              </div>
+            </div>
+          )}
+          
 
             {/* Project Metadata */}
             <div className="mt-12 pt-12 border-t border-border-primary dark:border-dark-border">
