@@ -123,6 +123,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
             </div>
 
             <br></br>
+            <br></br>
             {/* Demo Video Section */}
           {(project.demoVideoUrl || project.demoVideoFile) && (
             <div className="mb-12">
