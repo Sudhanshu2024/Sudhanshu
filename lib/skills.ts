@@ -10,7 +10,7 @@ export const skillCategories: SkillCategory[] = [
     id: 'languages',
     icon: 'Code',
     title: 'Languages',
-    skills: ['JavaScript/TypeScript', 'Python', 'Java', 'C', 'Visual Basic .NET'],
+    skills: ['JavaScript/TypeScript', 'Python', 'Java'],
   },
   {
     id: 'backend',
