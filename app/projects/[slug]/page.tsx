@@ -110,6 +110,8 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
             </div>
           )}
 
+          
+
           {/* Project Description */}
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <div className="space-y-6">
@@ -119,6 +121,8 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                 dangerouslySetInnerHTML={{ __html: project.fullDescription }}
               />
             </div>
+
+            <br></br>
             {/* Demo Video Section */}
           {(project.demoVideoUrl || project.demoVideoFile) && (
             <div className="mb-12">
