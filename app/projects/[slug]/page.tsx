@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import { projects } from '@/lib/projects'
 import type { Metadata } from 'next'
@@ -91,11 +92,12 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
             </div>
           </div>
 
+          {/* Demo Video Section */}
           {(project.demoVideoUrl || project.demoVideoFile) && (
             <div className="mb-12">
-              <div className="aspect-video bg-bg-secondary dark:bg-dark-bg rounded-lg overflow-hidden">
+              <h2 className="text-2xl font-bold text-text-primary dark:text-dark-text mb-4">Demo Video</h2>
+              <div className="aspect-video bg-bg-secondary dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg">
                 {project.demoVideoUrl ? (
-                  // YouTube embed
                   <iframe
                     src={project.demoVideoUrl}
                     className="w-full h-full"
@@ -103,7 +105,6 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                     allowFullScreen
                   />
                 ) : project.demoVideoFile ? (
-                  // Self-hosted video file
                   <video
                     src={project.demoVideoFile}
                     className="w-full h-full object-contain"
@@ -117,20 +118,35 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
             </div>
           )}
 
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <div className="aspect-video bg-bg-secondary dark:bg-dark-bg rounded-lg overflow-hidden mb-12 flex items-center justify-center">
-              <span className="text-text-secondary dark:text-dark-text-secondary">Project Thumbnail</span>
+          {/* Project Thumbnail/Image */}
+          {project.thumbnail && (
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-text-primary dark:text-dark-text mb-4">Project Preview</h2>
+              <div className="aspect-video bg-bg-secondary dark:bg-dark-bg rounded-lg overflow-hidden shadow-lg relative">
+                <Image
+                  src={project.thumbnail}
+                  alt={`${project.title} thumbnail`}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
-            
+          )}
+
+          {/* Project Description */}
+          <div className="prose prose-lg dark:prose-invert max-w-none">
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-text-primary dark:text-dark-text mb-4">About This Project</h2>
-              <p className="text-lg text-text-primary dark:text-dark-text leading-relaxed whitespace-pre-line">
-                {project.fullDescription}
-              </p>
+              <div 
+                className="text-lg text-text-primary dark:text-dark-text leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: project.fullDescription }}
+              />
             </div>
 
+            {/* Project Metadata */}
             <div className="mt-12 pt-12 border-t border-border-primary dark:border-dark-border">
-              <div className="grid grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-sm font-medium text-text-secondary dark:text-dark-text-secondary mb-2">Year</h3>
                   <p className="text-lg font-medium text-text-primary dark:text-dark-text">{project.year}</p>

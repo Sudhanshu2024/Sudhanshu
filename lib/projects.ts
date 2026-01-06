@@ -17,7 +17,7 @@ export const projects: Project[] = [
     slug: "AI-Voice-Assistant",
     title: "AI Voice Assistant",
     shortDescription: "Voice-controlled AI assistant with real-time responses",
-    fullDescription: "Developed an AI-powered voice assistant that processes user voice commands and provides real-time responses using speech-to-text and text-to-speech technologies. Integrated with various APIs to perform tasks such as setting reminders, fetching weather updates, and controlling smart home devices. Built with Next.js for the frontend and Node.js for the backend, utilizing WebSockets for real-time communication.",
+    fullDescription: "Developed an AI-powered voice assistant that processes user voice commands and provides real-time responses using speech-to-text and text-to-speech technologies. Integrated with various APIs to perform tasks such as setting reminders, fetching weather updates, and controlling smart home devices. Built with Next.js for the frontend and Node.js for the backend, utilizing WebSockets for real-time communication. The project showcases advanced AI capabilities and seamless user interaction through voice commands.<br><br>Key Features:<br>- Real-time voice recognition and response<br>- Integration with third-party APIs for extended functionality<br>- User-friendly interface with responsive design<br>- Secure handling of user data and privacy considerations",
     thumbnail: "/projects/ai-voice-asisstant.png",
     demoVideoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     techStack: ["Next.js", "Python", "LiveKit Cloud", "TypeScript", "WebSockets"],
