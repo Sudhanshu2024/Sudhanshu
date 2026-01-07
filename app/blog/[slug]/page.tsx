@@ -18,16 +18,40 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
   const post = blogPosts.find((p) => p.slug === params.slug)
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://sudhanshukrsinha.vercel.app'
 
   if (!post) {
     return {
-      title: 'Post Not Found',
+      title: 'Post Not Found | Sudhanshu Kumar Sinha',
     }
   }
 
   return {
     title: `${post.title} | Sudhanshu Kumar Sinha`,
-    description: post.excerpt,
+    description: `${post.excerpt} - Blog post by Sudhanshu Kumar Sinha, AI / Full-Stack Developer.`,
+    keywords: [
+      ...post.tags,
+      'Sudhanshu Kumar Sinha',
+      'Sudhanshu Sinha',
+      'Blog',
+      'Tech Blog',
+      'Web Development',
+      'Full Stack Developer',
+    ],
+    authors: [{ name: post.author, url: siteUrl }],
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `${siteUrl}/blog/${post.slug}`,
+      type: 'article',
+      publishedTime: post.date,
+      authors: [post.author],
+      tags: post.tags,
+      images: post.coverImage ? [{ url: `${siteUrl}${post.coverImage}`, alt: post.title }] : [],
+    },
+    alternates: {
+      canonical: `${siteUrl}/blog/${post.slug}`,
+    },
   }
 }
 

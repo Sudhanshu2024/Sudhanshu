@@ -46,7 +46,7 @@ export default function HeroSection() {
               variants={itemVariants}
               className="text-5xl md:text-7xl font-bold leading-tight floating-text glowing-text"
             >
-              Hello, I&apos;m Sudhanshu
+              Hello, I&apos;m <span itemProp="name">Sudhanshu Kumar Sinha</span>
             </motion.h1>
 
             <motion.div

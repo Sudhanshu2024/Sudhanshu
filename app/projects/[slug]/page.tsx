@@ -19,16 +19,36 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
   const project = projects.find((p) => p.slug === params.slug)
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://sudhanshukrsinha.vercel.app'
 
   if (!project) {
     return {
-      title: 'Project Not Found',
+      title: 'Project Not Found | Sudhanshu Kumar Sinha',
     }
   }
 
   return {
     title: `${project.title} | Sudhanshu Kumar Sinha`,
-    description: project.shortDescription,
+    description: `${project.shortDescription} - Project by Sudhanshu Kumar Sinha, AI / Full-Stack Developer. Built with ${project.techStack.join(', ')}.`,
+    keywords: [
+      project.title,
+      'Sudhanshu Kumar Sinha',
+      'Sudhanshu Sinha',
+      ...project.techStack,
+      'Full Stack Developer',
+      'AI Developer',
+      'Portfolio Project',
+    ],
+    openGraph: {
+      title: `${project.title} | Sudhanshu Kumar Sinha`,
+      description: project.shortDescription,
+      url: `${siteUrl}/projects/${project.slug}`,
+      type: 'website',
+      images: project.thumbnail ? [{ url: `${siteUrl}${project.thumbnail}`, alt: project.title }] : [],
+    },
+    alternates: {
+      canonical: `${siteUrl}/projects/${project.slug}`,
+    },
   }
 }
 
