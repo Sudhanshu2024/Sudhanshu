@@ -42,6 +42,7 @@ export const skillCategories: SkillCategory[] = [
       'Framer Motion',
       'Responsive Design',
       'Windows Forms',
+      'Framer',
     ],
   },
   {

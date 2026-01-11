@@ -14,8 +14,8 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "Football-Analytics",
-    title: "Football Analytics Dashboard",
+    slug: "AI-Football-Analytics",
+    title: "AI Football Analysis Dashboard",
     shortDescription: "Real-time analytics for football teams and players",
     fullDescription: "<span style='color:#2563eb; font-weight:600;'>Building</span> a football analytics dashboard focused on understanding how real-time data can be collected, processed, and visualized for teams and players.<br><br>Currently, the project is in an active development and learning phase, where I am exploring different modules required to build a scalable and reliable analytics system. The goal is to aggregate data from live match feeds and historical datasets to generate meaningful insights around player performance, team tactics, and match outcomes.<br><br>I am experimenting with data modeling, WebSocket-based real-time updates, and interactive visualizations using D3.js to better understand how large volumes of sports data can be represented clearly and intuitively.<br><br><strong>Planned Features & Learning Goals:</strong><br>- Real-time data ingestion during live matches using Socket.io<br>- Interactive charts and dashboards for performance analysis<br>- PostgreSQL-based data storage for historical insights<br>- Role-based access and authentication concepts<br>- Custom analytics views and report generation<br><br>This project serves as a hands-on learning experience to deepen my understanding of real-time systems, data visualization, and full-stack architecture while gradually evolving into a complete analytics platform.",
 
