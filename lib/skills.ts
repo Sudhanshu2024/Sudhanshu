@@ -56,6 +56,8 @@ export const skillCategories: SkillCategory[] = [
       'Neural Networks',
       'Algorithm Visualization',
       'Machine Learning',
+      'OpenAI API',
+      'n8n Automation',
     ],
   },
 ]

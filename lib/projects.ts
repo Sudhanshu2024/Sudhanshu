@@ -38,12 +38,104 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/Sudhanshu2024/Voice-Assistance-AI",
     year: 2026
   },
+  {
+  slug: "AI-automated-job-hunting",
+  title: "AI Automated Job Hunting",
+  shortDescription: "AI-powered n8n workflow for automated job discovery, resume matching, and smart notifications",
+  fullDescription: `
+    <p>
+      <b>AI Automated Job Hunting</b> is an end-to-end, AI-driven automation platform designed to streamline and personalize the job search process.
+      The system leverages <b>n8n, AI/LLMs, Google Sheets, and Telegram Bot integration</b> to eliminate manual job searching and surface only highly relevant opportunities.
+    </p>
+
+    <p>
+      The workflow is <b>scheduled to trigger automatically at a fixed time every day</b>, ensuring continuous job discovery without user intervention.
+      Once triggered, the automation executes a multi-step intelligent pipeline.
+    </p>
+
+    <p><b>Workflow Overview:</b></p>
+
+    <ul>
+      <li>
+        <b>Resume Fetching & Parsing</b><br>
+        Automatically fetches the candidate’s resume from a predefined source and parses it to extract skills, experience, and key competencies.
+      </li>
+      <br>
+
+      <li>
+        <b>Dynamic Job Search Configuration</b><br>
+        Reads job preferences such as keywords, locations, experience level, job type, and remote preferences from Google Sheets and dynamically constructs LinkedIn job search URLs.
+      </li>
+      <br>
+
+      <li>
+        <b>Job Description Analysis</b><br>
+        Processes job descriptions from LinkedIn URLs and analyzes role requirements using AI for accurate comparison.
+      </li>
+      <br>
+
+      <li>
+        <b>AI Resume–Job Matching</b><br>
+        Compares the resume against each job description and calculates a <b>resume matching score (%)</b> based on skill relevance and experience alignment.
+      </li>
+      <br>
+
+      <li>
+        <b>AI-Generated Cover Letter</b><br>
+        Generates a <b>personalized cover letter</b> for each job by combining resume data, job description, and company context.
+      </li>
+      <br>
+
+      <li>
+        <b>Results Storage & Tracking</b><br>
+        Appends structured results—including job title, company name, job URL, matching score, generated cover letter, and execution timestamp—into a Results Google Sheet.
+      </li>
+      <br>
+
+      <li>
+        <b>Telegram Bot Notification</b><br>
+        Sends real-time Telegram notifications when the resume matching score is <b>greater than 50%</b>, ensuring only high-quality opportunities are surfaced.
+      </li>
+    </ul>
+
+    <p><b>Key Highlights:</b></p>
+
+    <ul>
+      <li>Fully automated daily job discovery</li>
+      <li>AI-based resume–job relevance scoring</li>
+      <li>Personalized cover letter generation</li>
+      <li>Google Sheets as a dynamic control and tracking layer</li>
+      <li>Telegram Bot integration for instant notifications</li>
+      <li>Human-in-the-loop decision-making for applications</li>
+    </ul>
+
+    <p>
+      <b>Impact:</b><br>
+      This project transforms job hunting from a repetitive manual task into an <b>intelligent, AI-powered workflow</b>, significantly improving efficiency, relevance, and application quality.
+    </p>
+  `,
+  thumbnail: "/projects/n8n.png",
+  demoVideoUrl: "/projects/n8ndemo.mp4",
+  techStack: [
+    "n8n",
+    "AI / LLMs",
+    "Next.js",
+    "Tailwind CSS",
+    "TypeScript",
+    "Google Sheets API",
+    "Telegram Bot API"
+  ],
+  liveUrl: "",
+  repoUrl: "",
+  year: 2026
+},
+
   
   {
     slug: "Client-portfolio",
     title: "Client Portfolio",
     shortDescription: "Responsive portfolio website for a client",
-    fullDescription: "Developed a responsive portfolio website for a client using Next.js and Tailwind CSS. The site features a modern design with smooth animations, interactive elements, and optimized performance.<br> Includes sections for projects, skills, and contact information. Implemented the site with SEO best practices and integrated a contact form with email notifications.The project was delivered on time and received positive feedback from the client for its design and functionality.<br>The portfolio effectively reflects the best features of Next.Js , with caching and server-side rendering for fast load times. The contents were easily managed through a headless CMS, allowing the client to update their projects and skills without needing technical knowledge.<br> Although this was just a portfolio website, it showcases the capabilities of Next.Js in building fast, responsive, and user-friendly web applications and allowed me to work with a real client, enhancing my communication and project management skills.",
+  fullDescription: "Developed a responsive portfolio website for a client using Next.js and Tailwind CSS. The site features a modern design with smooth animations, interactive elements, and optimized performance.<br> Includes sections for projects, skills, and contact information. Implemented the site with SEO best practices and integrated a contact form with email notifications.The project was delivered on time and received positive feedback from the client for its design and functionality.<br>The portfolio effectively reflects the best features of Next.Js , with caching and server-side rendering for fast load times. The contents were easily managed through a headless CMS, allowing the client to update their projects and skills without needing technical knowledge.<br> Although this was just a portfolio website, it showcases the capabilities of Next.Js in building fast, responsive, and user-friendly web applications and allowed me to work with a real client, enhancing my communication and project management skills.",
     thumbnail: "/projects/client-portfolio.png",
     demoVideoUrl: "",
     techStack: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript", "Vercel", "Headless CMS"],
